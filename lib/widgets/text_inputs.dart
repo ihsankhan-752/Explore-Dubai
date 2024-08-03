@@ -14,6 +14,7 @@ class CustomTextInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       textAlignVertical: TextAlignVertical.center,
+      controller: controller,
       obscureText: isSecureText ?? false,
       decoration: InputDecoration(
         border: InputBorder.none,
