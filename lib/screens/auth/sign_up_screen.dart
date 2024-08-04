@@ -1,5 +1,4 @@
 import 'package:explore_dubai/screens/auth/login_screen.dart';
-import 'package:explore_dubai/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,6 +7,7 @@ import '../../utils/app_colors.dart';
 import '../../widgets/buttons.dart';
 import '../../widgets/logo_widget.dart';
 import '../../widgets/text_inputs.dart';
+import '../home/home_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -80,7 +80,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               PrimaryButton(
                 title: "Sign Up",
                 onPressed: () {
-                  Get.to(() => HomeScreen());
+                  Get.offAll(() => const HomeScreen());
                 },
               ),
               const SizedBox(height: 30),
