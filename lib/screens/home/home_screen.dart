@@ -1,4 +1,5 @@
 import 'package:explore_dubai/const/lists.dart';
+import 'package:explore_dubai/screens/home/book_now/book_now_screen.dart';
 import 'package:explore_dubai/screens/home/explore/explore_screen.dart';
 import 'package:explore_dubai/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: selectedVal == e.name ? AppColors.primaryColor : Colors.grey,
+                        color: selectedVal == e.name ? AppColors.primaryColor : Colors.grey.shade300,
                       ),
                       child: Center(
                         child: Padding(
@@ -90,11 +91,20 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 300),
-              child: selectedVal == "Explore" ? const ExploreScreen() : Container(),
+              child: navigatedScreens(selectedVal),
             ),
           ),
         ],
       ),
     );
+  }
+
+  navigatedScreens(String selectedVal) {
+    if (selectedVal == 'Explore') {
+      return const ExploreScreen();
+    }
+    if (selectedVal == 'Book Now') {
+      return const BookNowScreen();
+    }
   }
 }
