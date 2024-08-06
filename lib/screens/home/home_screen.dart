@@ -3,6 +3,7 @@ import 'package:explore_dubai/screens/home/book_now/book_now_screen.dart';
 import 'package:explore_dubai/screens/home/explore/explore_screen.dart';
 import 'package:explore_dubai/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,13 +35,13 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           "Welcome",
           style: GoogleFonts.nunito(
-            fontSize: 18,
+            fontSize: 18.sp,
             fontWeight: FontWeight.bold,
             color: AppColors.primaryWhite,
           ),
         ),
         actions: <Widget>[
-          Icon(Icons.person, size: 25, color: AppColors.primaryWhite),
+          Icon(Icons.person, size: 25.w, color: AppColors.primaryWhite),
           const SizedBox(width: 10),
         ],
       ),
@@ -50,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
             controller: _scrollController,
             scrollDirection: Axis.horizontal,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
               child: Row(
                 children: homeScreenList.asMap().entries.map((entry) {
                   int index = entry.key;

@@ -1,5 +1,6 @@
 import 'package:explore_dubai/screens/home/book_now/widgets/booking_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
@@ -15,7 +16,7 @@ class BookNowScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,13 +29,13 @@ class BookNowScreen extends StatelessWidget {
                 width: 55,
                 decoration: BoxDecoration(
                   color: Colors.grey.shade300,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(10.r),
                 ),
                 child: Consumer<StateSelectingController>(builder: (context, stateController, child) {
                   return PopupMenuButton<String>(
                     icon: Icon(
                       Icons.filter_alt_outlined,
-                      size: 30,
+                      size: 30.w,
                       color: AppColors.primaryBlack,
                     ),
                     onSelected: (String v) {
@@ -53,7 +54,7 @@ class BookNowScreen extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           Row(
             children: [
               Text("Book Destination", style: AppTextStyle.primaryBold),
@@ -61,7 +62,7 @@ class BookNowScreen extends StatelessWidget {
               Text("See All", style: AppTextStyle.primaryBold),
             ],
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           const BookingCard(),
         ],
       ),

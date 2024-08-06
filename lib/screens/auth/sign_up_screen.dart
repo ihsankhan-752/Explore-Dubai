@@ -1,5 +1,6 @@
 import 'package:explore_dubai/screens/auth/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +25,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       body: LogoWidget(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: EdgeInsets.symmetric(horizontal: 15.h),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -33,24 +34,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   "Explore Dubai\n with us",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.acme(
-                    fontSize: 35,
+                    fontSize: 35.sp,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primaryWhite,
                     letterSpacing: 1.5,
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               const CustomTextInput(
                 hintText: 'Full Name',
                 icon: Icons.person,
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               const CustomTextInput(
                 hintText: 'Email',
                 icon: Icons.email_outlined,
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               CustomTextInput(
                 hintText: 'Password',
                 icon: Icons.lock,
@@ -63,7 +64,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     child: Icon(_isPasswordVisible ? Icons.visibility_off : Icons.visibility)),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               CustomTextInput(
                 hintText: 'Confirm Password',
                 icon: Icons.lock,
@@ -76,14 +77,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     child: Icon(_isConfirmPasswordVisible ? Icons.visibility_off : Icons.visibility)),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               PrimaryButton(
                 title: "Sign Up",
                 onPressed: () {
                   Get.offAll(() => const HomeScreen());
                 },
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               GestureDetector(
                 onTap: () {
                   Get.offAll(() => const LoginScreen());
@@ -94,14 +95,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Text(
                       "Already have an account? ",
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         color: AppColors.primaryWhite.withOpacity(0.9),
                       ),
                     ),
                     Text(
                       "Login",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 18.sp,
                         color: AppColors.primaryWhite,
                         fontWeight: FontWeight.bold,
                       ),

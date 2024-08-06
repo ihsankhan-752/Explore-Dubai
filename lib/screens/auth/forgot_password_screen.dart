@@ -1,5 +1,6 @@
 import 'package:explore_dubai/screens/auth/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,7 +23,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     return Scaffold(
       body: LogoWidget(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: EdgeInsets.symmetric(horizontal: 15.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -31,20 +32,20 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   "Explore Dubai\n with us",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.acme(
-                    fontSize: 35,
+                    fontSize: 35.sp,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primaryWhite,
                     letterSpacing: 1.5,
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               CustomTextInput(
                 controller: emailController,
                 hintText: 'Email',
                 icon: Icons.email_outlined,
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               PrimaryButton(
                 title: "Reset",
                 onPressed: () {
@@ -52,16 +53,16 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       context: context,
                       builder: (_) {
                         return SimpleDialog(
-                          title: const Icon(
+                          title: Icon(
                             Icons.email_outlined,
-                            size: 40,
+                            size: 40.r,
                           ),
                           children: [
                             Center(
                               child: Text(
                                 "Reset Link sent to ${emailController.text}",
                                 style: TextStyle(
-                                  fontSize: 12,
+                                  fontSize: 12.sp,
                                   color: AppColors.primaryColor,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -72,7 +73,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                               child: Text(
                                 "Please reset your password and login again with new password",
                                 style: TextStyle(
-                                  fontSize: 13,
+                                  fontSize: 13.sp,
                                   color: AppColors.primaryBlack,
                                 ),
                                 textAlign: TextAlign.center,

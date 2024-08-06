@@ -5,6 +5,7 @@ import 'package:explore_dubai/utils/app_colors.dart';
 import 'package:explore_dubai/utils/text_styles.dart';
 import 'package:explore_dubai/widgets/text_inputs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
@@ -15,7 +16,7 @@ class ExploreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -24,8 +25,8 @@ class ExploreScreen extends StatelessWidget {
               children: [
                 SizedBox(width: Get.width * 0.76, child: const CustomTextInput(hintText: 'Search', icon: Icons.search)),
                 Container(
-                  height: 55,
-                  width: 55,
+                  height: 55.h,
+                  width: 55.w,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade300,
                     borderRadius: BorderRadius.circular(10),
@@ -53,9 +54,9 @@ class ExploreScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20.h),
             const SwiperWidget(),
-            const SizedBox(height: 15),
+            SizedBox(height: 15.w),
             Row(
               children: [
                 Consumer<StateSelectingController>(builder: (context, stateController, child) {
@@ -71,7 +72,7 @@ class ExploreScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             SizedBox(
               height: Get.height * 0.4,
               child: GridView.builder(
@@ -82,7 +83,7 @@ class ExploreScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
+                      borderRadius: BorderRadius.circular(6.r),
                       image: DecorationImage(
                         image: NetworkImage(dubaiPopularPlaces[index].placeImage),
                         fit: BoxFit.cover,

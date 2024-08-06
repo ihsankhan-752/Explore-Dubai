@@ -4,6 +4,7 @@ import 'package:explore_dubai/widgets/buttons.dart';
 import 'package:explore_dubai/widgets/logo_widget.dart';
 import 'package:explore_dubai/widgets/text_inputs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,19 +33,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   "Explore Dubai\n with us",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.acme(
-                    fontSize: 35,
+                    fontSize: 35.sp,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primaryWhite,
                     letterSpacing: 1.5,
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               const CustomTextInput(
                 hintText: 'Email',
                 icon: Icons.email_outlined,
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               CustomTextInput(
                 hintText: 'Password',
                 icon: Icons.lock,
@@ -57,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Icon(_isVisible ? Icons.visibility_off : Icons.visibility)),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
               GestureDetector(
                 onTap: () {
                   Get.to(() => const ForgotPasswordScreen());
@@ -67,16 +68,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text(
                     "Forgot Password?",
                     style: GoogleFonts.nunito(
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       color: AppColors.primaryWhite,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.sp),
               const PrimaryButton(title: "Login"),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.sp),
               GestureDetector(
                 onTap: () {
                   Get.offAll(() => const SignUpScreen());
@@ -87,14 +88,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       "Don't have an account? ",
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         color: AppColors.primaryWhite.withOpacity(0.9),
                       ),
                     ),
                     Text(
                       "Sign Up",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 18.sp,
                         color: AppColors.primaryWhite,
                         fontWeight: FontWeight.bold,
                       ),

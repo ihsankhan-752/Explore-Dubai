@@ -4,6 +4,7 @@ import 'package:explore_dubai/screens/auth/login_screen.dart';
 import 'package:explore_dubai/utils/app_colors.dart';
 import 'package:explore_dubai/widgets/logo_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
             "Explore Dubai\n with us",
             textAlign: TextAlign.center,
             style: GoogleFonts.acme(
-              fontSize: 45,
+              fontSize: 45.sp,
               fontWeight: FontWeight.bold,
               color: AppColors.primaryWhite,
               letterSpacing: 1.5,
