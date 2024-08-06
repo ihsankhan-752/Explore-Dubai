@@ -1,4 +1,5 @@
 import 'package:explore_dubai/const/lists.dart';
+import 'package:explore_dubai/screens/home/blogs/blogs_screen.dart';
 import 'package:explore_dubai/screens/home/book_now/book_now_screen.dart';
 import 'package:explore_dubai/screens/home/explore/explore_screen.dart';
 import 'package:explore_dubai/utils/app_colors.dart';
@@ -106,6 +107,9 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     if (selectedVal == 'Book Now') {
       return const BookNowScreen();
+    }
+    if (selectedVal == 'Blogs') {
+      return const BlogsScreen();
     }
   }
 }
