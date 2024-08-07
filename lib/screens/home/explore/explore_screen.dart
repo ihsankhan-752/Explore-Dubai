@@ -25,8 +25,8 @@ class ExploreScreen extends StatelessWidget {
               children: [
                 SizedBox(width: Get.width * 0.76, child: const CustomTextInput(hintText: 'Search', icon: Icons.search)),
                 Container(
-                  height: 55.h,
-                  width: 55.w,
+                  height: 46.h,
+                  width: 52.w,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade300,
                     borderRadius: BorderRadius.circular(10),

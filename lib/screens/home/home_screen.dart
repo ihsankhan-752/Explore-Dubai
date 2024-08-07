@@ -2,9 +2,11 @@ import 'package:explore_dubai/const/lists.dart';
 import 'package:explore_dubai/screens/home/blogs/blogs_screen.dart';
 import 'package:explore_dubai/screens/home/book_now/book_now_screen.dart';
 import 'package:explore_dubai/screens/home/explore/explore_screen.dart';
+import 'package:explore_dubai/screens/home/minor_screens/profile_screen.dart';
 import 'package:explore_dubai/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -42,7 +44,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         actions: <Widget>[
-          Icon(Icons.person, size: 25.w, color: AppColors.primaryWhite),
+          GestureDetector(
+              onTap: () {
+                Get.to(() => const ProfileScreen());
+              },
+              child: Icon(Icons.person, size: 25.w, color: AppColors.primaryWhite)),
           const SizedBox(width: 10),
         ],
       ),
